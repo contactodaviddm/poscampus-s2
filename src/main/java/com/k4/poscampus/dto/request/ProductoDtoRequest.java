@@ -20,5 +20,4 @@ public record ProductoDtoRequest(
         @NotNull(message = "Error, el precio de venta no puede ser nulo")
         BigDecimal precioVenta
 ) {
-
 }
