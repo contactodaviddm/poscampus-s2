@@ -9,7 +9,7 @@ import lombok.Setter;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "detale_venta")
+@Table(name = "detalle_venta")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -20,10 +20,10 @@ public class DetalleVenta {
     private Long id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(nullable = false, name = "venta_id")
-    private Venta ventaId;
+    private Venta venta;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(nullable = false, name = "producto_id")
-    private Producto productoId;
+    private Producto producto;
     @Column(nullable = false)
     private Integer cantidad;
     @Column(nullable = false)
